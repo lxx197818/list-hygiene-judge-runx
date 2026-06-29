@@ -7,52 +7,80 @@
   "public_url": "https://runx.ai/x/lxx197818/list-hygiene-judge@sha-4c3c223c63dc",
   "source_url": "https://github.com/lxx197818/list-hygiene-judge-runx/tree/main",
   "pr_url": "https://github.com/runxhq/runx/pull/174",
-  "observations": {
-    "runx_version": "runx-cli 0.6.14",
-    "package_name": "list-hygiene-judge",
-    "harness_status": "passed",
-    "harness_cases": [
-      {
-        "name": "sealed_decay_re_permission",
-        "status": "sealed",
-        "receipt_id": "sha256:0fc6d1702b43ab6607812f33f9f59473df41e129895be2f9767912fa861ffc1c"
-      },
-      {
-        "name": "sealed_hard_bounce_suppress",
-        "status": "sealed",
-        "receipt_id": "sha256:cba5098de7c3e33ebe356a8b9a048ee41b1145fe1898c8fbac0a622c10d6004e"
-      },
-      {
-        "name": "stop_missing_or_stale_evidence",
-        "status": "sealed",
-        "receipt_id": "sha256:93c18d7501dd55de76957729d5d67e680df21c3b91d2278be3f6dfdac6c22034"
+  "observations": [
+    {
+      "kind": "runx_version",
+      "value": "runx-cli 0.6.14"
+    },
+    {
+      "kind": "public_registry_listing",
+      "public_url": "https://runx.ai/x/lxx197818/list-hygiene-judge@sha-4c3c223c63dc",
+      "registry_ref": "lxx197818/list-hygiene-judge@sha-4c3c223c63dc"
+    },
+    {
+      "kind": "source_provenance",
+      "source_url": "https://github.com/lxx197818/list-hygiene-judge-runx/tree/99fe2a0a1f6e209db3a28c44e8b6cf77b84c6168",
+      "pr_url": "https://github.com/runxhq/runx/pull/174"
+    },
+    {
+      "kind": "local_harness",
+      "status": "passed",
+      "cases": [
+        {
+          "name": "sealed_decay_re_permission",
+          "status": "sealed",
+          "receipt_id": "sha256:0fc6d1702b43ab6607812f33f9f59473df41e129895be2f9767912fa861ffc1c"
+        },
+        {
+          "name": "sealed_hard_bounce_suppress",
+          "status": "sealed",
+          "receipt_id": "sha256:cba5098de7c3e33ebe356a8b9a048ee41b1145fe1898c8fbac0a622c10d6004e"
+        },
+        {
+          "name": "stop_missing_or_stale_evidence",
+          "status": "sealed",
+          "receipt_id": "sha256:93c18d7501dd55de76957729d5d67e680df21c3b91d2278be3f6dfdac6c22034"
+        }
+      ]
+    },
+    {
+      "kind": "dogfood_receipt",
+      "receipt_id": "sha256:e6937a46f3813c19181a367d0702a79b7c6b2c88d16f93fd7157f3829f9b8c33",
+      "decision": {
+        "aggregate_id": "contact:demo-001",
+        "decision_state": "re_permission",
+        "reason": "recency_days=120 exceeds decay_threshold_days=90 with no unsubscribe marker.",
+        "recorded_new_state": "re_permission",
+        "idempotency_key": "contact:demo-001:list-hygiene:2026-06-29",
+        "receipt_id": "sha256:e6937a46f3813c19181a367d0702a79b7c6b2c88d16f93fd7157f3829f9b8c33"
       }
-    ],
-    "consent_state_verdict": {
-      "aggregate_id": "contact:demo-001",
-      "decision_state": "re_permission",
-      "reason": "recency_days=120 exceeds decay_threshold_days=90 with no unsubscribe marker.",
-      "recorded_new_state": "re_permission",
-      "idempotency_key": "contact:demo-001:list-hygiene:2026-06-29",
-      "receipt_id": "sha256:e6937a46f3813c19181a367d0702a79b7c6b2c88d16f93fd7157f3829f9b8c33"
     },
-    "hard_bounce_case": {
-      "decision_state": "suppress",
-      "data_store_resource": "contact_consent_events",
-      "reason": "hard_bounces > 0 yields a contact.consent_state.suppressed append_event"
+    {
+      "kind": "hard_bounce_case",
+      "value": {
+        "decision_state": "suppress",
+        "data_store_resource": "contact_consent_events",
+        "reason": "hard_bounces > 0 yields a contact.consent_state.suppressed append_event"
+      }
     },
-    "stop_case": {
-      "decision_state": "stop",
-      "append_emitted": false,
-      "reason": "stale expected_version emits no append_event and routes to list_hygiene.review"
+    {
+      "kind": "stop_case",
+      "value": {
+        "decision_state": "stop",
+        "append_emitted": false,
+        "reason": "stale expected_version emits no append_event and routes to list_hygiene.review"
+      }
     },
-    "safety": {
-      "no_send": true,
-      "no_operational_proposal": true,
-      "downstream_dispatch_by_name": "send-as",
-      "data_store_adapter_ref": "registry:runx/data-store@0.1.2"
+    {
+      "kind": "safety_boundary",
+      "value": {
+        "no_send": true,
+        "no_operational_proposal": true,
+        "downstream_dispatch_by_name": "send-as",
+        "data_store_adapter_ref": "registry:runx/data-store@0.1.2"
+      }
     }
-  },
+  ],
   "commands": {
     "version": "runx --version",
     "local_harness": "runx harness ./skills/list-hygiene-judge -j",
@@ -66,5 +94,19 @@
     "skill_md": "https://raw.githubusercontent.com/lxx197818/runx/codex/list-hygiene-judge-68/skills/list-hygiene-judge/SKILL.md",
     "verification_json": "https://raw.githubusercontent.com/lxx197818/runx/codex/list-hygiene-judge-68/skills/list-hygiene-judge/references/verification.json",
     "report": "https://raw.githubusercontent.com/lxx197818/runx/codex/list-hygiene-judge-68/skills/list-hygiene-judge/references/report.md"
+  },
+  "summary": "Published lxx197818/list-hygiene-judge as a public runx registry skill, with PR source, raw X.yaml/SKILL.md, local harness receipts, install proof, and dogfood receipt for a consent-state re-permission decision based on data-store read and append evidence.",
+  "dogfood": {
+    "status": "sealed",
+    "receipt_ref": "runx:receipt:sha256:e6937a46f3813c19181a367d0702a79b7c6b2c88d16f93fd7157f3829f9b8c33",
+    "package": "lxx197818/list-hygiene-judge@sha-4c3c223c63dc",
+    "decision_state": "re_permission",
+    "append_status": "committed",
+    "after_version": 4,
+    "harness_cases": [
+      "sealed_decay_re_permission",
+      "sealed_hard_bounce_suppress",
+      "stop_missing_or_stale_evidence"
+    ]
   }
 }
