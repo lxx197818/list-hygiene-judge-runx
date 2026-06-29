@@ -1,7 +1,7 @@
 {
   "schema": "runx.list_hygiene_kg.verification.v1",
   "package": "list-hygiene-judge",
-  "version": "sha-2257d9ba5451",
+  "version": "sha-4c3c223c63dc",
   "runx_version": "runx-cli 0.6.14",
   "local_harness": {
     "status": "passed",
@@ -27,7 +27,7 @@
   },
   "hosted_registry": {
     "status": "published_not_recorded_harness",
-    "expected_public_url": "https://runx.ai/x/lxx197818/list-hygiene-judge@sha-2257d9ba5451",
-    "expected_registry_ref": "lxx197818/list-hygiene-judge@sha-2257d9ba5451"
+    "expected_public_url": "https://runx.ai/x/lxx197818/list-hygiene-judge@sha-4c3c223c63dc",
+    "expected_registry_ref": "lxx197818/list-hygiene-judge@sha-4c3c223c63dc"
   }
 }
