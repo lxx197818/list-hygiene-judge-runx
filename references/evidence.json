@@ -1,11 +1,11 @@
 {
   "schema": "runx.list_hygiene_kg.evidence.v1",
   "package": "list-hygiene-judge",
-  "version": "0.1.0",
+  "version": "sha-2257d9ba5451",
   "publisher_owner": "lxx197818",
-  "registry_ref": "lxx197818/list-hygiene-judge@0.1.0",
-  "public_url": "https://runx.ai/x/lxx197818/list-hygiene-judge@0.1.0",
-  "source_url": "https://github.com/lxx197818/runx/tree/codex/list-hygiene-judge-68/skills/list-hygiene-judge",
+  "registry_ref": "lxx197818/list-hygiene-judge@sha-2257d9ba5451",
+  "public_url": "https://runx.ai/x/lxx197818/list-hygiene-judge@sha-2257d9ba5451",
+  "source_url": "https://github.com/lxx197818/list-hygiene-judge-runx/tree/main",
   "pr_url": "https://github.com/runxhq/runx/pull/174",
   "observations": {
     "runx_version": "runx-cli 0.6.14",
@@ -57,8 +57,8 @@
     "version": "runx --version",
     "local_harness": "runx harness ./skills/list-hygiene-judge -j",
     "publish": "runx login --provider github --for publish && runx registry publish ./skills/list-hygiene-judge/SKILL.md --registry https://api.runx.ai",
-    "install": "runx add lxx197818/list-hygiene-judge@0.1.0",
-    "dogfood": "runx skill lxx197818/list-hygiene-judge@0.1.0 --json ...",
+    "install": "runx add lxx197818/list-hygiene-judge@sha-2257d9ba5451",
+    "dogfood": "runx skill lxx197818/list-hygiene-judge@sha-2257d9ba5451 --json ...",
     "verify": "runx verify --receipt <receipt.json> --json"
   },
   "artifact_refs": {

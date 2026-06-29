@@ -3,7 +3,7 @@
 Package: `list-hygiene-judge`  
 Version: `0.1.0`  
 Publisher: `lxx197818`  
-Registry ref: `lxx197818/list-hygiene-judge@0.1.0`
+Registry ref: `lxx197818/list-hygiene-judge@sha-2257d9ba5451`
 
 ## What this skill does
 
@@ -48,8 +48,8 @@ The run read `contact:demo-001`, observed `recency_days=120`, compared it to a
 ## Install and run
 
 ```bash
-runx add lxx197818/list-hygiene-judge@0.1.0
-runx skill lxx197818/list-hygiene-judge@0.1.0 --json \
+runx add lxx197818/list-hygiene-judge@sha-2257d9ba5451
+runx skill lxx197818/list-hygiene-judge@sha-2257d9ba5451 --json \
   -i data_source_ref=local://runx/list-hygiene/demo \
   -i resource=contact_consent_events \
   -i aggregate_id=contact:demo-001 \
@@ -64,8 +64,8 @@ Expected output packet: `runx.list_hygiene_judgment.v1`.
 
 ## Public artifacts
 
-- Public URL: `https://runx.ai/x/lxx197818/list-hygiene-judge@0.1.0`
+- Public URL: `https://runx.ai/x/lxx197818/list-hygiene-judge@sha-2257d9ba5451`
 - PR URL: `https://github.com/runxhq/runx/pull/174`
-- Source URL: `https://github.com/lxx197818/runx/tree/codex/list-hygiene-judge-68/skills/list-hygiene-judge`
+- Source URL: `https://github.com/lxx197818/list-hygiene-judge-runx/tree/main`
 - X.yaml: `https://raw.githubusercontent.com/lxx197818/runx/codex/list-hygiene-judge-68/skills/list-hygiene-judge/X.yaml`
 - SKILL.md: `https://raw.githubusercontent.com/lxx197818/runx/codex/list-hygiene-judge-68/skills/list-hygiene-judge/SKILL.md`
